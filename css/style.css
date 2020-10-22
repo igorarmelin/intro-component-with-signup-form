@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    /* COLORS */
+    --white: #FFF;
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+
+    /* TYPOGRAPHY */
+    --font-size: 16px;
+    --font-family: 'Poppins', sans-serif;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+}
+
+/* General configs */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: var(--font-size);
+}
+
+body {
+  background: var(--red);
+  background-image: url(../images/bg-intro-desktop.png);
+  background-size: cover;
+  font-family: var(--font-family);
+  font-weight: 400;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  display: block;
+  border-style: none;
+  max-width: 100%;
+}
+
+input {
+    display: block;
+}
+
+/* Specifics configs */
+
+.signup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    padding: 50px;
+}
+
+.signup-left {
+    flex: 1;
+    color: var(--white);
+    max-width: 540px;
+    margin-right: 75px;
+}
+
+.signup-left h1 {
+    font-size: 3em;
+    max-width: 460px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.signup-left p {
+    max-width: 540px;
+}
+
+.signup-right {
+    flex: 1;
+    max-width: 540px;
+}
+
+.signup-right p {
+    background-color: var(--blue);
+    color: var(--white);
+    text-align: center;
+    padding: 15px 0px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+.signup-right p > span {
+    font-weight: var(--font-weight-700);
+}
+
+.signup-right-form {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.2);
+    padding: 45px;
+}
+
+.signup-right-form .form-control > input {
+    color: var(--dark-blue);
+    font-weight: var(--font-weight-600);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--grayish-blue);
+    outline: none;
+    padding: 15px 25px;
+}
+
+.signup-right-form .form-control {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.signup-right-form .form-control > small {
+    margin-top: 5px;
+    display: block;
+    color: var(--red);
+    text-align: right;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.signup-right-form .form-control > input::placeholder {
+    color: var(--dark-blue);
+}
+
+.signup-right-form .form-control > input:focus {
+    border: 1px solid var(--dark-blue);
+}
+
+.signup-right-form .form-control img {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+}
+
+.signup-right-form > button {
+    text-transform: uppercase;
+    color: var(--white);
+    background-color: var(--green);
+    font-weight: var(--font-weight-600);
+    font-family: var(--font-family);
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-bottom: none;
+    box-shadow: 0px 4px 0px 0px rgba(45, 163, 112, 1);
+    outline: none;
+    padding: 15px 25px;
+    margin-bottom: 20px;
+}
+
+.signup-right-form > button:focus {
+    outline: none;
+}
+
+.signup-right-form > button:active {
+    background-color: rgba(56, 204, 140, 0.8);
+    box-shadow: 0px 4px 0px 0px rgba(45, 163, 112, 0.6);
+}
+
+.signup-right-form .terms {
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    color: var(--grayish-blue);
+    font-weight: var(--font-weight-600);
+}
+
+.signup-right-form .terms > a {
+    text-decoration: none;
+    color: var(--red);
+    font-weight: var(--font-weight-700);
+}
+
+@media only screen and (max-width: 480px) {
+    .signup-left {
+        flex: none;
+        margin-right: 0;
+        text-align: center;
+        max-width: 320px;
+        margin-bottom: 75px;
+    }
+
+    .signup-left h1 {
+        font-size: 1.5em;
+    }
+
+    .signup-right p {
+        padding: 15px 65px;
+    }
+}

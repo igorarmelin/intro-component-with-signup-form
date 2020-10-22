@@ -23,24 +23,40 @@
         but understanding how developers think is invaluable.</p>
     </div>
     <div class="signup-right">
-      <p>Try it free 7 days then $20/mo. thereafter</p>
+      <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
       <form class="signup-right-form">
-        <input type="text" id="name">
-        <input type="text" id="lastname">
-        <input type="email" id="email">
-        <input type="password" id="password">
+        <div class="form-control">
+          <input type="text" id="name" placeholder="First Name">
+          <img src="images/icon-error.svg" alt="error icon">
+          <small></small>
+        </div>
+        <div class="form-control">
+          <input type="text" id="lastname" placeholder="Last Name">
+          <img src="images/icon-error.svg" alt="error icon">
+          <small></small>
+        </div>
+        <div class="form-control">
+          <input type="email" id="email" placeholder="Email Address">
+          <img src="images/icon-error.svg" alt="error icon">
+          <small></small>
+        </div>
+        <div class="form-control">
+          <input type="password" id="password" placeholder="Password">
+          <img src="images/icon-error.svg" alt="error icon">
+          <small></small>
+        </div>
         <button type="submit" id="button">Claim your free trial</button>
-        <p>By clicking the button, you are agreeing to our Terms and Services</p>
+        <small class="terms">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></small>
       </form>
     </div>
   </section>
   
-  <footer>
+  <!-- <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Igor Pegoraro Armelin</a>.
     </p>
-  </footer>
+  </footer> -->
 
   <script src="js/main.js"></script>
 </body>
