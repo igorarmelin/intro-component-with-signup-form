@@ -140,11 +140,24 @@ input {
     border: 1px solid var(--dark-blue);
 }
 
+.form-control.error input {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+.form-control.error input::placeholder {
+    color: var(--red);
+}
+
 .signup-right-form .form-control img {
     display: none;
     position: absolute;
     top: 15px;
     right: 25px;
+}
+
+.form-control.error img {
+    display: block;
 }
 
 .signup-right-form > button {
@@ -172,6 +185,14 @@ input {
 .signup-right-form > button:active {
     background-color: rgba(56, 204, 140, 0.8);
     box-shadow: 0px 4px 0px 0px rgba(45, 163, 112, 0.6);
+}
+
+.form-control small {
+   display: none;
+}
+
+.form-control.error small {
+    display: block;
 }
 
 .signup-right-form .terms {
